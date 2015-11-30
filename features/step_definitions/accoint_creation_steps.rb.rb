@@ -41,4 +41,9 @@ end
 
 And(/^I click on Save button$/) do
   one_login.account_creation_page.save_password.click
+
+end
+
+Then(/^I should see setup completion page$/) do
+  @browser.find_element(:xpath, "//li[@class='sidebar']/h3").text
 end
