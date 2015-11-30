@@ -2,24 +2,24 @@ Given(/^I navigate to Account creation page$/) do
   one_login.account_creation_page.navigate
 end
 
-Then(/^I type "([^"]*)" to first name text field$/) do |first_name|
+Then(/^I type "([^"]*)" into first name field$/) do |first_name|
   one_login.account_creation_page.first_name.send_keys first_name
 end
 
-And(/^I type "([^"]*)" to last name text field$/) do |last_name|
+And(/^I type "([^"]*)" into last name field$/) do |last_name|
   one_login.account_creation_page.last_name.send_keys last_name
 end
 
-And(/^I type random email address to email text field$/) do
+And(/^I type random email address into email field$/) do
   email = one_login.account_creation_page.generate_random_email
   one_login.account_creation_page.email.send_keys email
 end
 
-Then(/^I type "([^"]*)" to company name text field$/) do |company_name|
+Then(/^I type "([^"]*)" into company name field$/) do |company_name|
   one_login.account_creation_page.company_name.send_keys company_name
 end
 
-Then(/^I type (\d+) to number of employees text field$/) do |number_of_employees|
+Then(/^I type (\d+) into number of employees field$/) do |number_of_employees|
   one_login.account_creation_page.number_of_employees.send_keys number_of_employees
 end
 
@@ -35,7 +35,7 @@ When(/^I click on Create Account button$/) do
   one_login.account_creation_page.create_account.click
 end
 
-Then(/^I type my password "([^"]*)" on account creation page$/) do |password|
+Then(/^I type my password "([^"]*)" into password field/) do |password|
   one_login.account_creation_page.user_password.send_keys password
 end
 

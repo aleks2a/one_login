@@ -1,41 +1,18 @@
-Feature: Account creation form
+Feature: Trial account creation
+  As OneLogin user I can create trial account for
+  14 days period
 
-
-  Scenario: Login with valid account
-    Given I navigate to Login page
-    Then I type my login "tet@aaa.aaa" on login page
-    And I type my password "" on login page
-    When I click on Login button
-    Then I should see "Please fill in both fields" error on login page
-
-
-  Scenario: Login with valid account
-    Given I navigate to Login page
-    Then I type my login "tet@aaa.aaa" on login page
-    And I type my password "" on login page
-    When I click on Login button
-    Then I should see "Invalid username or password" error on login page
-
-
-  Scenario: Login with valid account
-    Given I navigate to Login page
-    Then I type my login "tet@aaa.aaa" on login page
-    And I type my password "root1234" on login page
-    When I click on Login button
-    Then I should be signed-in user
-
-
-  Scenario: Create account
+  Scenario: Create new account
     Given I navigate to Account creation page
-    Then I type "John" to first name text field
-    And I type "Smith" to last name text field
-    And I type random email address to email text field
-    Then I type "OneLogin Test" to company name text field
-    Then I type 100 to number of employees text field
-    Then I type "6506506500" to phone number text field
-    And I select "Unlimited" plan from drop down menu
+    Then I type "John" into first name field
+    And I type "Smith" into last name field
+    Then I type random email address into email field
+    And I type "OneLogin Test" into company name field
+    Then I type 100 into number of employees field
+    And I type "6506506500" to phone number text field
+    Then I select "Unlimited" plan from drop down menu
     When I click on Create Account button
-    Then I type my password "root1234" on account creation page
+    Then I type my password "root1234" into password field
     And I click on Save button
 
 
