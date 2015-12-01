@@ -1,7 +1,7 @@
 Feature: Trial account creation
   As OneLogin user I can create trial account for
   14 days period
-@qwe
+
   Scenario: Create new account
     Given I navigate to Account creation page
     Then I type "John" into first name field

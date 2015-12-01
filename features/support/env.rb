@@ -18,31 +18,25 @@ def take_screenshot file_name
   @browser.save_screenshot "features/screenshots/#{file_name}"
 end
 
-def browser_caps browser
-  if browser == :internet_explorer
+def browser_caps
+  if BROWSER == :internet_explorer
     return { :platform => "Windows 7", :browserName => "ie", :version => "10", :avoidProxy => true }
-  elsif browser == :chrome
+  elsif BROWSER == :chrome
     return { :platform => "Mac OS X 10.9", :browserName => "Chrome", :version => "31" }
-  elsif browser == :firefox
+  elsif BROWSER == :firefox
     return { :platform => "Mac OS X 10.9", :browserName => "Firefox", :version => "40" }
   end
 end
 
-def get_caps
-  return browser_caps BROWSER if SERVER == :remote
-  return BROWSER.to_sym if SERVER == :local
-end
-
-
 Before do
   if SERVER == :local
-    @browser = Selenium::WebDriver.for get_caps
+    @browser = Selenium::WebDriver.for BROWSER
     @browser.manage.window.maximize
   end
 
   if SERVER == :remote
     sauce_endpoint = "http://#{SAUCE_USERNAME}:#{SAUCE_API_KEY}@ondemand.saucelabs.com:80/wd/hub"
-    @browser = Selenium::WebDriver.for :remote, :url => sauce_endpoint, :desired_capabilities => get_caps
+    @browser = Selenium::WebDriver.for :remote, :url => sauce_endpoint, :desired_capabilities => browser_caps
   end
 end
 
