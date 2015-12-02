@@ -1,0 +1,8 @@
+login: --format html --out report.html --format pretty --tags @login
+login_test: --tags @login
+
+regression_tests: --format html --out report.html --format pretty --tags @regression
+
+account_creation: --format html --out report.html --format pretty --tags @account_creation
+
+
