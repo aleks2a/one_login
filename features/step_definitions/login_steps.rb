@@ -11,14 +11,16 @@ And(/^I type my password "([^"]*)"$/) do |password|
 end
 
 When(/^I click on Login button$/) do
-  one_login.login_page.log_in_button.click
-  sleep 30
-end
-
-Then(/^I should see "([^"]*)" error on login page$/) do |error|
-  expect(one_login.login_page.error_message.text).to be == error
+  one_login.login_page.login_button.click
 end
 
 Then(/^I verify successful login$/) do
-  expect(one_login.login_page.admin.displayed?).to be_truthy
+  expect(one_login.login_page.admin_logo.displayed?).to be == true
 end
+
+
+Then(/^I should see "([^"]*)" error on login page$/) do |error_message|
+  # puts @browser.find_element(:css, "div.error-message").text
+  expect(one_login.login_page.error_message.text).to be == error_message
+end
+
