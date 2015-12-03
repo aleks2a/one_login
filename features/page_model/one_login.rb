@@ -7,5 +7,4 @@ class OneLogin < PageActions
   def login_page
     @login_page ||= LoginPage.new @browser
   end
-
 end
