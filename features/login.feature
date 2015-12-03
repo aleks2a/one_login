@@ -6,7 +6,7 @@ Feature: Test valid and invalid login scenarios
     Given I navigate to Login page
 #    Then I type my login test-user@gmail.com
     Then I type my login "test_user-xdolhjya@onelogin.com"
-    And I type my password "root12342"
+    And I type my password "root1234"
     When I click on Login button
     Then I verify successful login
 
