@@ -1,4 +1,4 @@
-login: --format html --out report.html --format pretty --tags @login
+login: --format junit --out junit_format --format html --out report.html --format pretty --tags @login
 login_test: --tags @login
 
 regression_tests: --format html --out report.html --format pretty --tags @regression

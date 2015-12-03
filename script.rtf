@@ -1,0 +1,222 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue128;\red41\green123\blue222;}
+\margl1440\margr1440\vieww21840\viewh16280\viewkind0
+\deftab720
+\pard\pardeftab720\sl400
+
+\f0\b\fs30 \cf0 \expnd0\expndtw0\kerning0
+Day 1
+\f1\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+Cucumber
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\fi960\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+I. create cucumber structure: project folder(cucumber_intro), features
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs30 \expnd0\expndtw0\kerning0
+II. create new feature file login.feature
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0\'a0 *. create new scenario to print credentials in terminal:
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs26 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0
+\f2\b \cf2 \kerning1\expnd0\expndtw0 Feature: 
+\f3\b0 \cf0 Login\uc0\u8232   Test valid and invalid login scenarios\u8232 \u8232   
+\f2\b \cf2 Scenario: 
+\f3\b0 \cf0 Login with valid credentials\uc0\u8232     
+\f2\b \cf2 Given 
+\f3\b0 \cf0 I navigate to Login page\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type my login "
+\f2\b \cf3 test_user-xdolhjya@onelogin.com
+\f3\b0 \cf0 "\uc0\u8232     
+\f2\b \cf2 And 
+\f3\b0 \cf0 I type my password "
+\f2\b \cf3 root1234
+\f3\b0 \cf0 "\uc0\u8232     
+\f2\b \cf2 When 
+\f3\b0 \cf0 I click on Login button\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I verify successful login\uc0\u8232 \u8232   
+\f2\b \cf2 Scenario: 
+\f3\b0 \cf0 Login without email and password valid account\uc0\u8232     
+\f2\b \cf2 Given 
+\f3\b0 \cf0 I navigate to Login page\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type my login ""\uc0\u8232     
+\f2\b \cf2 And 
+\f3\b0 \cf0 I type my password ""\uc0\u8232     
+\f2\b \cf2 When 
+\f3\b0 \cf0 I click on Login button\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I should see "
+\f2\b \cf3 Please fill in both fields
+\f3\b0 \cf0 " error on login page\uc0\u8232 \u8232   
+\f2\b \cf2 Scenario: 
+\f3\b0 \cf0 Login without password\uc0\u8232     
+\f2\b \cf2 Given 
+\f3\b0 \cf0 I navigate to Login page\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type my login "
+\f2\b \cf3 tet@aaa.aaa
+\f3\b0 \cf0 "\uc0\u8232     
+\f2\b \cf2 And 
+\f3\b0 \cf0 I type my password "
+\f2\b \cf3 test
+\f3\b0 \cf0 "\uc0\u8232     
+\f2\b \cf2 When 
+\f3\b0 \cf0 I click on Login button\uc0\u8232     
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I should see "
+\f2\b \cf3 Invalid username or password
+\f3\b0 \cf0 " error on login page
+\fs32 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\pard\pardeftab720
+
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\fi960\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+*. create new scenario to print in terminal login and email as a parameter
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs30 \expnd0\expndtw0\kerning0
+*. create Background and move first step there 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0\'a0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+      
+\f0\fs30 \expnd0\expndtw0\kerning0
+*. copy paste previous scenario and convert to scenario outline where login and password parameters
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs30 \expnd0\expndtw0\kerning0
+\'a0\'a0
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+
+\f0\fs30 \cf0 \expnd0\expndtw0\kerning0
+\'a0
+\fs26 \'a0\'a0IV. Cucumber Profiles
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0*. create cucumber.yml
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0 base: \'a0--tags @login
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0 login: --format html --out report.html --format pretty --tags @login
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0 a_and_b: \'a0--format html --out report.html --format pretty --tags @bbb --tags @aaa
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+\'a0\'a0\'a0\'a0\'a0 a_or_b: \'a0--format html --out report.html --format pretty --tags @bbb,@aaa
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\b\fs26 \cf2 \kerning1\expnd0\expndtw0 Scenario: 
+\f3\b0 \cf0 Create account\uc0\u8232   
+\f2\b \cf2 Given 
+\f3\b0 \cf0 I navigate to Account creation page\uc0\u8232   
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type "
+\f2\b \cf3 John
+\f3\b0 \cf0 " to first name text field\uc0\u8232   
+\f2\b \cf2 And 
+\f3\b0 \cf0 I type "
+\f2\b \cf3 Smith
+\f3\b0 \cf0 " to last name text field\uc0\u8232   
+\f2\b \cf2 And 
+\f3\b0 \cf0 I type random email address to email text field\uc0\u8232   
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type "
+\f2\b \cf3 OneLogin Test
+\f3\b0 \cf0 " to company name text field\uc0\u8232   
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type 
+\f2\b \cf3 100
+\f3\b0 \cf0  to number of employees text field\uc0\u8232   
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type "
+\f2\b \cf3 6506506500
+\f3\b0 \cf0 " to phone number text field\uc0\u8232   
+\f2\b \cf2 And 
+\f3\b0 \cf0 I select "
+\f2\b \cf3 Unlimited
+\f3\b0 \cf0 " plan from drop down menu\uc0\u8232   
+\f2\b \cf2 When 
+\f3\b0 \cf0 I click on Create Account button\uc0\u8232   
+\f2\b \cf2 Then 
+\f3\b0 \cf0 I type my password "
+\f2\b \cf3 root1234
+\f3\b0 \cf0 " on account creation page\uc0\u8232   
+\f2\b \cf2 And 
+\f3\b0 \cf0 I click on Save button\
+
+\f2\b \cf2    Then 
+\f3\b0 \cf0 I should see setup completion page
+\fs32 \
+\pard\pardeftab720\sl320
+
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl400
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\fs32 *create hooks file( show before hook and after hook)\
+Start selenium
+\fs24 \
+}
