@@ -1,5 +1,6 @@
 require "selenium-webdriver"
 require "rspec"
+require 'csv'
 require "pry"
 
 # path PageActions class
